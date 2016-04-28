@@ -1,5 +1,5 @@
 /* GET 'home' page */
-module.exports.homelist = function (req, res) {
+module.exports.homelist = function(req, res) {
     res.render('locations-list', {
         title: 'Loc8r - find a place to work with wifi',
         pageHeader: {
@@ -30,15 +30,15 @@ module.exports.homelist = function (req, res) {
 };
 
 /* GET 'Location info' page */
-module.exports.locationInfo = function (req, res) {
+module.exports.locationInfo = function(req, res) {
     res.render('location-info', {
         title: 'Starcups',
         pageHeader: {
             title: 'Starcups'
         },
         sidebar: {
-            context: 'is on Loc8r because it has accessible wifi and space to sit down with your laptop andget some work done.',
-            callToAction: 'If you\'ve been and you like it - or if you don\'t -please leave a review to help other people just like you.'
+            context: 'is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
+            callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
         },
         location: {
             name: 'Starcups',
@@ -67,24 +67,23 @@ module.exports.locationInfo = function (req, res) {
                 author: 'Simon Holmes',
                 rating: 5,
                 timestamp: '16 July 2013',
-                reviewText: 'What a great place. I can\'t say enough good things➥
-                about it.
-                '
+                reviewText: 'What a great place. I can\'t say enough good things about it.'
             }, {
                 author: 'Charlie Chaplin',
                 rating: 3,
                 timestamp: '16 June 2013',
-                reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was➥
-                fast.
-                '
+                reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
             }]
         }
     });
 };
 
 /* GET 'Add review' page */
-module.exports.addReview = function (req, res) {
+module.exports.addReview = function(req, res) {
     res.render('location-review-form', {
-        title: 'Add review'
+        title: 'Review Starcups on Loc8r',
+        pageHeader: {
+            title: 'Review Starcups'
+        }
     });
 };
